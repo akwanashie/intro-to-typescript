@@ -1,0 +1,7 @@
+{
+  "name": "intro-to-typescript",
+  "version": "1.0.0",
+  "main": "index.js",
+  "author": "Augustine Kwanashie <akwanashie@gmail.com>",
+  "license": "MIT"
+}
