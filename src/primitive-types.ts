@@ -23,3 +23,18 @@ const d: undefined = undefined
 
 // what's element?
 const y: Element = undefined
+
+// numbers
+const n1: number = 1
+const n2: number = 1e10
+const hex: number = 0xf00d
+
+// template strings and embedded functions
+const s1 = `
+  this is a multi like template string
+  with a number of expressions. ${n1}
+`
+
+enum Colours { Blue, Red, Black }
+enum Colours2 { Blue = 1, Red = 3, Black = 2 }
+console.log(Colours2[3]) // prints Red
