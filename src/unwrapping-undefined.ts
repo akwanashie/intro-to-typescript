@@ -8,12 +8,9 @@ const people: (string| undefined)[] = [
 
 const realPeople: string[] = people.filter((person) => person !== undefined)
 
-const realPeople2: string[] = people.reduce((acc, val) => {
-  if (val) {
-    acc.push(val)
-  }
-  return acc
-}, [])
+const realPeople2: string[] = people.reduce(
+  (acc, val) => !val ? acc : [...acc, val], []
+)
 
 console.log(realPeople)
 console.log(realPeople2)
