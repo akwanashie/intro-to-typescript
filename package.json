@@ -3,5 +3,17 @@
   "version": "1.0.0",
   "main": "index.js",
   "author": "Augustine Kwanashie <akwanashie@gmail.com>",
-  "license": "MIT"
+  "license": "MIT",
+  "scripts": {
+    "test": "mocha dist/test/*",
+    "pretest": "rm -rf dist && tsc"
+  },
+  "devDependencies": {
+    "@types/chai": "^4.1.7",
+    "@types/mocha": "^5.2.5",
+    "@types/node": "^10.12.5",
+    "chai": "^4.2.0",
+    "mocha": "^5.2.0",
+    "verify-it": "^2.2.0"
+  }
 }
