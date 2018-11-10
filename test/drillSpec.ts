@@ -1,4 +1,4 @@
-import { drill } from '../src/drill-into-object'
+import { drill } from '../src/drill'
 import { Gen } from 'verify-it'
 import * as chai from 'chai'
 chai.should()
