@@ -13,15 +13,27 @@ function isArray (value: any): boolean {
   return Array.isArray(value)
 }
 
-export function drill (target: any, path: Path) {
+function isObject (value: any): boolean {
+  return !isArray(value) && typeof value === 'object'
+}
+
+export function drill (target: any, path: Path, defaultValue: any = undefined) {
   if (path.length === 0) {
-    return target
+    return target || defaultValue
   }
 
-  if (isString(target) || isNumber(target) || isArray(target) || !target) {
-    return undefined
+  if ((isString(target) || isNumber(target) || !target)) {
+    return defaultValue
   }
 
   const pathHead = path.shift()
-  return drill(target[pathHead], path)
+  if (isString(pathHead) && isArray(target)) {
+    return defaultValue
+  }
+
+  if (isNumber(pathHead) && isObject(target)) {
+    return defaultValue
+  }
+
+  return drill(target[pathHead], path) || defaultValue
 }
