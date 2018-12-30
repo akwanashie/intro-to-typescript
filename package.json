@@ -13,7 +13,9 @@
     "@types/mocha": "^5.2.5",
     "@types/node": "^10.12.5",
     "chai": "^4.2.0",
-    "mocha": "^5.2.0",
+    "mocha": "^5.2.0"
+  },
+  "dependencies": {
     "verify-it": "^2.2.0"
   }
 }
