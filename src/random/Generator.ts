@@ -15,7 +15,7 @@ export default class Generator {
     if (keyType.name === 'NULL') {
       return null
     } else if (keyType.name === 'STRING') {
-      return Gen.string()
+      return Gen.word()
     } else if (keyType.name === 'OBJECT') {
       const objectSchema = keyType as ObjectType
       return Generator.generate(objectSchema.schema)

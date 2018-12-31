@@ -22,7 +22,7 @@ export function RandomString(length: number = 10): StringType {
   return { length, name: 'STRING' }
 }
 
-export function RandomNull(): NullType {
+export function Null(): NullType {
   return { name: 'NULL' }
 }
 
