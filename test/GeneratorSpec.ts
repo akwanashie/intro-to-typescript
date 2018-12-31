@@ -5,8 +5,7 @@ import { expect } from 'chai'
 
 describe('RandomObject.generate', () => {
   verify.it('should generate an empty object if no schema is provided', () => {
-    const generator = new Generator({})
-    generator.generate().should.eql({})
+    Generator.generate({}).should.eql({})
   })
 
   verify.it('should generate an object with string properties',
@@ -14,8 +13,7 @@ describe('RandomObject.generate', () => {
       const schema = {
         [key]: RandomString()
       }
-      const generator = new Generator(schema)
-      const generatedObject = generator.generate()
+      const generatedObject = Generator.generate(schema)
       return (typeof generatedObject[key]).should.eql('string')
     }
   )
@@ -25,8 +23,7 @@ describe('RandomObject.generate', () => {
       const schema = {
         [key]: RandomNull()
       }
-      const generator = new Generator(schema)
-      const generatedObject = generator.generate()
+      const generatedObject = Generator.generate(schema)
       return expect(generatedObject[key]).to.be.null
     }
   )
@@ -38,8 +35,7 @@ describe('RandomObject.generate', () => {
           [subKey]: RandomString()
         })
       }
-      const generator = new Generator(schema)
-      const generatedObject = generator.generate()
+      const generatedObject = Generator.generate(schema)
       return (typeof generatedObject[key][subKey]).should.eql('string')
     }
   )
