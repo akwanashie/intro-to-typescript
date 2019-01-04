@@ -2,7 +2,8 @@
     "compilerOptions": {
         "target": "es6",
         "outDir": "dist",
-        "module": "commonjs"
+        "module": "commonjs",
+        "experimentalDecorators": true
     },
     "exclude": [
         "src/types/*"
